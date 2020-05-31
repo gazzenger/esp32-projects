@@ -33,3 +33,23 @@ The wiring is shown below:
 !important
 **To be able to connect a peripheral to this RS232 port, it'll be required that the Rx and Tx on the RS232 pins are swapped.
 The existing plug on these MAX3232s are design so the device can be connected to a computer, i.e. this device is a peripheral.
+
+
+## Linux Usage
+For interfacing RS232 devices with linux, use a USB-RS232 device
+
+Once connected, outputs can be verified by using the command
+```bash
+$ echo /dev/ttyUSB1
+```
+
+To send a message, use the following 
+```bash
+echo -ne "asdf" > /dev/ttyUSB1
+```
+
+To set the properties of the connection, use the following commands,
+i.e. baud rate as 19200kbps, 7 bits, even parity (with the minus), and 1 stop bit
+```bash
+$ stty -F /dev/ttyUSB1 speed 19200 cs7 -parodd -cstopb
+```
