@@ -29,3 +29,7 @@ Powering this device off 3.3V cause noise to be interpretted in the TX data.
 The wiring is shown below:
 
 ![Image of layout](https://raw.githubusercontent.com/gazzenger/esp32-projects/master/rs232-ttl/hardware-serial_bb.png)
+
+!important
+**To be able to connect a peripheral to this RS232 port, it'll be required that the Rx and Tx on the RS232 pins are swapped.
+The existing plug on these MAX3232s are design so the device can be connected to a computer, i.e. this device is a peripheral.
