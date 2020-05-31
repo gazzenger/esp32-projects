@@ -11,4 +11,4 @@ For this project, the following devices are require:
 
 The wiring is shown below:
 
-![Image of layout](https://raw.githubusercontent.com/gazzenger/esp32-projects/rs232-ttl/hardware-serial_bb.png)
+![Image of layout](https://raw.githubusercontent.com/gazzenger/esp32-projects/master/rs232-ttl/hardware-serial_bb.png)
