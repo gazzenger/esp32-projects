@@ -1,0 +1,23 @@
+esphome:
+  name: garage_door
+  platform: ESP8266
+  board: d1_mini
+  includes:
+    - evo-60m.h
+  libraries:
+    - "Wire"
+
+# Enable logging
+logger:
+  level: DEBUG
+  esp8266_store_log_strings_in_flash: False
+
+sensor:
+  - platform: custom
+    lambda: |-
+      auto my_sensor = new Evo60m();
+      App.register_component(my_sensor);
+      return {my_sensor};
+  
+    sensors:
+      name: "My Custom Sensor"
